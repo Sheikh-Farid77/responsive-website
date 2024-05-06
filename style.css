@@ -98,3 +98,80 @@ nav ul li a:hover, nav ul li a.active{
 }
 }
 
+/* header section */
+
+header{
+    height: 91.5vh;
+    width: 100%;
+    background-image: url(image/leaves.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+/* service section */
+
+.service-section{
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(2, 22, 80) ;
+}
+.service-section h1{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    padding-top: 50px;
+}
+.services{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+    margin: 50px 100px auto 100px;
+    
+}
+.service-item{
+    background-color: #fff;
+    /* width: 360px;
+    height: 290px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 40px rgb(22, 33, 49);
+    border-radius: 5px;
+
+}
+.service-item i{
+    font-size: 30px;
+    padding: 15px 0 6px 0;
+}
+.icon{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.details{
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+/* responsive service section  */
+
+@media only screen and (max-width: 990px){
+    .services{
+        grid-template-columns: 1fr 1fr;
+    }
+    .service-section{
+        height: 100%;
+        width: 100%;
+    }
+}
+@media only screen and (max-width:720px){
+    .services{
+        grid-template-columns: 1fr;
+        margin: 50px 30px auto 30px;
+    }
+}
