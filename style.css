@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif
+}
+
+/* nav bar work start */
+
+nav{
+background-color: rgb(2, 22, 80);
+height: 80px;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 70px 0 200px;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 15px;
+   
+   
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    padding: 7px 13px;
+    border-radius: 3px;
+    transition: 0.5s;
+   
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li a:hover, nav ul li a.active{
+    background-color: #566576;
+}
+#click{
+    display: none;
+}
+.menu-btn{
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* responsive work start */
+
+@media only screen and (max-width: 940px){
+    nav{
+        padding-left: 30px;
+    }
+nav ul{
+    position: fixed;
+    background-color:  rgb(34, 54, 113);
+    top: 80px;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 15px;
+    left: -100%;
+    transition: all 0.5s ease;
+}
+#click:checked ~ .menu-btn i::before{
+    content: "\f00d";
+}
+#click:checked ~ ul{
+    left: 0%;
+}
+nav ul li a{
+    background: none;
+    font-size: 30px;
+}
+nav ul li a:hover, nav ul li a.active{
+    color: red;
+}
+.menu-btn{
+    display: block;
+}
+}
+
