@@ -20,6 +20,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 0 70px 0 200px;
+position: fixed;
 }
 
 .logo{
@@ -68,6 +69,9 @@ nav ul li a:hover, nav ul li a.active{
     nav{
         padding-left: 30px;
     }
+.logo{
+    font-size: 20px;
+}
 nav ul{
     position: fixed;
     background-color:  rgb(34, 54, 113);
@@ -139,7 +143,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 10px 10px 40px rgb(22, 33, 49);
+    box-shadow: 5px 5px 10px gray;
     border-radius: 5px;
 
 }
@@ -173,5 +177,68 @@ header{
     .services{
         grid-template-columns: 1fr;
         margin: 50px 30px auto 30px;
+    }
+}
+
+/* form-section */
+
+.form-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(53, 39, 13);
+
+}
+.form-info{
+    margin: 0px 200px 0px 200px;
+    margin-top: 100px;
+    padding: 0 100px;
+    background-color: rgb(4, 49, 44);
+    border: 2px solid #b2d8d8;
+
+   
+}
+.form-info h1{
+    text-align: center;
+    color: white;
+    margin: 30px 0;
+    font-size: 35px;
+
+}
+.form-info p{
+    color: #fff;
+    line-height: 1.7;
+}
+.input-info{
+    display: block;
+    width: 100%;
+    height: 35px;
+    margin: 20px 0;
+    border: none;
+    background-color: rgb(4, 49, 44);
+    outline: none;
+}
+.input-info::placeholder{
+    display: block;
+    color: #b2d8d8;
+    font-size: 20px;
+    border-bottom: 3px solid #b2d8d8;
+}
+.content{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 35px;
+    outline: white;
+    border: 2px solid white;
+    background-color: rgb(4, 49, 44);
+    color: white;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 950px){
+    .form-info{
+        margin: 0px 50px 0px 50px;
     }
 }
